@@ -8,6 +8,37 @@
   <name>CCCI Root Pom</name>
   <description>The ancestor of all CCCI projects</description>
   
+  
+  <distributionManagement>
+    <repository>
+      <id>artifacts.ccci.org-releases</id>
+      <name>artifacts.ccci.org-releases</name>
+      <url>http://arkham.ccci.org:80/artifactory/libs-releases-local</url>
+    </repository>
+  
+    <snapshotRepository>
+      <id>artifacts.ccci.org-snapshots</id>
+      <name>artifacts.ccci.org-snapshots</name>
+      <url>http://arkham.ccci.org:80/artifactory/libs-snapshots-local</url>
+    </snapshotRepository>
+  </distributionManagement>
+  
+  <repositories>
+    <repository>
+      <id>ccci-libs-releases</id>
+      <name>Libraries (Full Releases)</name>
+      <url>http://arkham.ccci.org/artifactory/libs-releases</url>
+    </repository>
+  </repositories>
+    
+  <pluginRepositories>
+    <pluginRepository>
+      <id>ccci-plugins-releases</id>
+      <name>Plugins Repository (Full Releases)</name>
+      <url>http://arkham.ccci.org/artifactory/plugins-releases</url>
+    </pluginRepository>
+  </pluginRepositories>
+  
   <properties>
     <!-- maven default encoding is platform-specific.  Since we develop on different platforms,
       default all projects to build using UTF-8 encoding instead.

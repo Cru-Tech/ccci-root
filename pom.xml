@@ -1,14 +1,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>super-poms</artifactId>
-    <groupId>org.ccci</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
+  
   <groupId>org.ccci</groupId>
   <artifactId>ccci-root</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>CCCI Root Pom</name>
   <description>The ancestor of all CCCI projects</description>
+  
+  <properties>
+    <!-- maven default encoding is platform-specific.  Since we develop on different platforms,
+      default all projects to build using UTF-8 encoding instead.
+     -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    
+    <!-- This is to address a maven 3 / bamboo (< 2.6) problem: http://jira.atlassian.com/browse/BAM-4887
+      We work around this by manually printing the token Bamboo is looking for in a successful build.  The
+      build should be configured to run the standard maven goals and then the help:evaluate goal; e.g.
+      mvn help:evaluate -Dexpression='atlassian.bamboo.builder.successMarker'
+        -->
+    <atlassian.bamboo.builder.successMarker>BUILD SUCCESSFUL</atlassian.bamboo.builder.successMarker>
+  
+  </properties>
 </project>

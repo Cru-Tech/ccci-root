@@ -3,14 +3,14 @@
   
   <groupId>org.ccci</groupId>
   <artifactId>ccci-root</artifactId>
-  <version>1</version>
+  <version>2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>CCCI Root Pom</name>
   <description>The ancestor of all CCCI projects</description>
   
   
   <scm>
-    <developerConnection>scm:svn:http://arkham.ccci.org/svn/java/tags/commons/super-poms/ccci-root-1</developerConnection>
+    <developerConnection>scm:svn:http://arkham.ccci.org/svn/java/trunk/commons/super-poms/ccci-root</developerConnection>
   </scm>
         
   
@@ -79,7 +79,7 @@
      -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     
-    <!-- This is to address a maven 3 / bamboo (< 2.6) problem: http://jira.atlassian.com/browse/BAM-4887 We work around this by manually printing the token Bamboo is looking for in a successful build.  The
+    <!-- This is to address a maven 3 / bamboo (< 2.6) problem: http://jira.atlassian.com/browse/BAM-4887 We work around this by manually printing the token Bamboo is looking for in a successful build. The
       build should be configured to run the standard maven goals and then the help:evaluate goal; e.g.
       mvn help:evaluate -Dexpression='atlassian.bamboo.builder.successMarker'
         -->

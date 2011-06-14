@@ -9,6 +9,12 @@
   <description>The ancestor of all CCCI projects</description>
   
   
+  <scm>
+    <connection>scm:svn:http://arkham.ccci.org/svn/java/trunk/commons/super-poms/ccci-root</connection>
+    <developerConnection>scm:svn:http://arkham.ccci.org/svn/java/trunk/commons/super-poms/ccci-root</developerConnection>
+  </scm>
+        
+  
   <distributionManagement>
     <repository>
       <id>artifacts.ccci.org-releases</id>

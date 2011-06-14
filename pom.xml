@@ -3,7 +3,7 @@
   
   <groupId>org.ccci</groupId>
   <artifactId>ccci-root</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>CCCI Root Pom</name>
   <description>The ancestor of all CCCI projects</description>

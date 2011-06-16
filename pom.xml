@@ -8,11 +8,13 @@
   <name>CCCI Root Pom</name>
   <description>The ancestor of all CCCI projects</description>
   
+  <ciManagement>
+    <system>Bamboo</system>
+  </ciManagement>
   
   <scm>
     <developerConnection>scm:svn:http://arkham.ccci.org/svn/java/trunk/commons/super-poms/ccci-root</developerConnection>
   </scm>
-        
   
   <distributionManagement>
     <repository>
@@ -78,6 +80,7 @@
     
     
     <plugins>
+    
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
@@ -85,7 +88,6 @@
           <tagBase>http://arkham.ccci.org/svn/java/tags/commons/super-poms/</tagBase>
         </configuration>
       </plugin>
-
     
     </plugins>
     

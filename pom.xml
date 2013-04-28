@@ -29,15 +29,22 @@
       <url>http://arkham.ccci.org:80/artifactory/libs-snapshots-local</url>
     </snapshotRepository>
   </distributionManagement>
-  
+
   <repositories>
     <repository>
       <id>ccci-libs-releases</id>
       <name>Libraries (Full Releases)</name>
       <url>http://arkham.ccci.org/artifactory/libs-releases</url>
     </repository>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>cru-snapshots</id>
+      <url>http://arkham.ccci.org:80/artifactory/libs-snapshots-local</url>
+    </repository>
   </repositories>
-    
+
   <pluginRepositories>
     <pluginRepository>
       <id>ccci-plugins-releases</id>
@@ -45,7 +52,7 @@
       <url>http://arkham.ccci.org/artifactory/plugins-releases</url>
     </pluginRepository>
   </pluginRepositories>
-  
+
   <build>
     <pluginManagement>
       <plugins>
